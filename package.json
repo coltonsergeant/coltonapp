@@ -1,0 +1,6 @@
+{
+	"name": "coltonapp",
+	"engines": {
+		"node": ">= 0.10"
+	}
+}
