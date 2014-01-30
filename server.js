@@ -9,4 +9,4 @@ app.get('/colton', function(req, res){
 app.get('/colton2', function(req, res){
   res.send('<|:)');
 });
-app.listen(3000);
+app.listen(process.env.PORT||3000);
