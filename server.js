@@ -1,6 +1,12 @@
-var http = require('http');
-var server = http.createServer (function(request, response)  {
-	response.end('Hello World');
+var express = require('express');
+var app = express();
+app.get('/', function(req, res){
+  res.send('hello world');
 });
-server.listen(process.env.PORT || 3000);
-console.log('Server is running...');
+app.get('/colton', function(req, res){
+  res.send('ello poppet');
+});
+app.get('/colton2', function(req, res){
+  res.send('<|:)');
+});
+app.listen(3000);
