@@ -1,2 +1,1 @@
-alert("you smell");
-console.log('hello there');
+var app = angular.module('ColtonApp', []);
