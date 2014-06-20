@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 app.use('/static', express.static('static'));
 app.engine('.html',ejs.renderFile);
-app.get('/', function(req, res){
+app.get('/*', function(req, res){
   res.render('index.html');
 });
 app.listen(process.env.PORT||3000);
