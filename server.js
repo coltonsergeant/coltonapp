@@ -3,6 +3,9 @@ var express = require('express');
 var app = express();
 app.use('/static', express.static('static'));
 app.engine('.html',ejs.renderFile);
+app.get('/api/data', function(req, res) {
+	res.json(['red', 'blue', 'green', 'yellow']);
+});
 app.get('/*', function(req, res){
   res.render('index.html');
 });

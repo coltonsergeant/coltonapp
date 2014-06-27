@@ -14,8 +14,12 @@ app.config(['$locationProvider', '$routeProvider', function($locationProvider, $
   });
 }]);
 
-function HomeController($scope) {
+function HomeController($scope, $http) {
 	$scope.title = 'home';
+  $scope.loadSomething = function(){
+    $http.get('/api/data').then(function(response) {
+      $scope.colors = response.data; });
+  }
 }
 function HomeControllerTwo($scope) {
 	$scope.title = 'page1';
