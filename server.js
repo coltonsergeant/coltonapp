@@ -6,9 +6,9 @@ app.use('/static', express.static('static'));
 app.engine('.html',ejs.renderFile);
 
 mongo.connect('mongodb://localhost/coltonapp', function(err, db) {
-app.get('/api/data', function(req, res) {
-	db.collection('items').find().toArray(function(err, items) {
-		res.json(items);
+	app.get('/api/data', function(req, res) {
+		db.collection('items').find().toArray(function(err, items) {
+			res.json(items);
 });
 	});
 app.get('/*', function(req, res){
